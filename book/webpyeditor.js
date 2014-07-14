@@ -11,9 +11,7 @@ function run_python(editor,result)
   
   //create the import to show on console
   var val = "import sys\n";
-  val +="from browser import document,prompt\n"
-  val += "def raw_input(data):\n";
-  val += "    return prompt(data)\n"
+  val +="from browser import document\n"
   val += "def write(data):\n";
   val +="    document['"+result+"'].value += str(data)";
   val += "\n"+"sys.stdout.write = write";

@@ -14,12 +14,12 @@ In your gitbook book.json
 "plugin" : [
 	"pywebtest-gitbook"
 	],
- pluginsConfig" : {
-      "bookPath" : "http://localhost:4000/"
+ "pluginsConfig" : {
+      "bookPath" : "http://www.mybook.com/"
     }
 ```
+You need to point the **bookPath** url because brython.js need to load from gitbook home path.
 
-You need to point the ** bookPath** url because brython.js need to load from gitbook home path.
 
 ## Screenshot
 

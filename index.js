@@ -14,7 +14,13 @@ module.exports = {
         ],
         html: {
           "body:start": function() {
-            return "<script src='"+ this.options.pluginsConfig.bookPath + "/gitbook/pywebtest-gitbook/js/brython.js'></script>";
+            var bookPath = this.options.pluginsConfig.bookPath;
+            if(bookPath.slice(-1)!="/")
+            {
+              bookPath = bookPath + "/";
+            }
+            var filepath = bookPath + "gitbook/pywebtest-gitbook/js/brython.js";
+            return "<script src='"+ filepath +"'></script>";
           }
         }
       },
