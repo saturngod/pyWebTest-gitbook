@@ -11,10 +11,15 @@ npm install pywebtest-gitbook
 In your gitbook book.json
 
 ```
-plugin : [
+"plugin" : [
 	"pywebtest-gitbook"
-	]
+	],
+ pluginsConfig" : {
+      "bookPath" : "http://localhost:4000/"
+    }
 ```
+
+You need to point the ** bookPath** url because brython.js need to load from gitbook home path.
 
 ## Screenshot
 

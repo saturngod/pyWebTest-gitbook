@@ -38,3 +38,12 @@ function run_python(editor,result)
   // clean up
   document.body.removeChild(py_script)
 }
+
+require(["gitbook"], function(gitbook) {
+
+  gitbook.events.bind("page.change", function(e, config) {
+    load_editor();
+  });
+  
+});
+
